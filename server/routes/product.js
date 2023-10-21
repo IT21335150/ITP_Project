@@ -6,7 +6,7 @@ const {
     deleteProduct,
     updateProduct
 
-} = require('../controllers/productController')
+} = require('../controllers/productInventoryController')
 const router =  express.Router()
 
 //get all products 
