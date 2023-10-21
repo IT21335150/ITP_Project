@@ -17,6 +17,8 @@ function App() {
   const [sideToggle, setSideToggle] = useState(false);
 
   return (
+    <BrowserRouter>
+    <NavbarInventory/>
     <Router>
       <Navbar click={() => setSideToggle(true)}/>
       <SideDrawer show={sideToggle} click={() => setSideToggle(false)}/>
@@ -28,9 +30,22 @@ function App() {
           <Route path='/product/:id'  element={<ProductScreen/>} />
           <Route path='/cart'  element={<CartScreen/>} />
           <Route exact path="/delivery" element={<DeliveryForm/>} />
+          <Route
+            path="/Inventory"
+            element={<Home />}
+          />
+          <Route
+            path='/NewProduct'
+            element={<NewProduct />}
+          />
+          <Route
+            path='/UpdatePage/:id'
+            element={<UpdatePage />}
+          />
         </Routes>
       </main>
     </Router>
+    </BrowserRouter>
   );
 }
 
