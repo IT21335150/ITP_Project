@@ -3,8 +3,8 @@ dotenv.config();
 const express = require("express");
 const app = express();
 const cors = require("cors");
-const connectDB = require("./config/DataBase");
-const productRoutes = require("./routes/productRoutes");
+const connectDB = require("../server/config/DataBase");
+const productRoutes = require("../server/routes/productRoutes");
 const mongoose = require("mongoose");
 
 // middleware
@@ -49,3 +49,13 @@ const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
+
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+  <React.StrictMode>
+    <ProductsContextProvider> 
+      <App />
+    </ProductsContextProvider>
+  </React.StrictMode>
+)
