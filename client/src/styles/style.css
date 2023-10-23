@@ -529,3 +529,10 @@ img {
     width: 70px;
   }
 }/*# sourceMappingURL=style.css.map */
+
+@media print {
+  .hide-in-pdf {
+    display: none;
+  }
+}
+
